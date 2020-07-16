@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import styled from "styled-components";
+import {Button, Navbar} from "reactstrap";
 import './App.css';
 
-function App() {
+const TestBar = styled(Button) `
+width: 50%;
+
+border: 5px solid red;
+`;
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar>my mcalc</Navbar>
+      <TestBar>Test</TestBar>
+      <p>
+        i have dirty underwear in my sock, and 
+        kenai keeps biting it
+      </p>
     </div>
   );
 }
