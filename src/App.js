@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Button} from "reactstrap";
+import Layout from "./components/Layout";
 
 const TestBar = styled(Button) `
 width: 50%;
@@ -9,12 +10,14 @@ border: 5px solid black;
 `;
 
 const PageDiv = styled.div `
-width:100%;
-
+width:100rem;
+height: 100;
+background-color: lightblue;
 `;
 
 const App = () => {
   return (
+    <Layout>
     <PageDiv className="App">
       <TestBar>Test</TestBar>
       <p>
@@ -22,6 +25,7 @@ const App = () => {
         kenai keeps biting it
       </p>
     </PageDiv>
+    </Layout>
   );
 }
 
