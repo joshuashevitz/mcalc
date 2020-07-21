@@ -1,5 +1,5 @@
+import React from "react";
 import styled from "styled-components";
-import Head from "next/head";
 import Topbar from "./Topbar";
 
 const Wrapper = styled.main`
@@ -21,9 +21,7 @@ const Main = styled.section`
 const Layout = ({ children, title = "Untitled 🤔", color = "white" }) => {
 	return (
 		<Wrapper>
-			<Head>
-				<title>{`${title} |Mcalc`}</title>
-			</Head>
+
 			<Topbar />
 			<Main color={color}>
 				{/* props.children contains all of the nodes in between the <Layout></Layout> tags.

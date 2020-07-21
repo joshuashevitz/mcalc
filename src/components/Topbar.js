@@ -1,5 +1,4 @@
-import { useState, useContext, memo } from "react";
-import Link from "next/link";
+import React, { useState, memo } from "react";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 import styled, { css } from "styled-components";
 
@@ -116,7 +115,7 @@ const Topbar = () => {
 
 	return (
 		// The second "light" is the color scheme for the hamburger icon
-		<StyledNavbar light expand="lg">
+		<StyledNavbar>
 			<NavbarToggler onClick={toggle} />
 			<Collapse isOpen={isOpen} navbar>
 				<CenteredNav className="ml-auto" navbar>
