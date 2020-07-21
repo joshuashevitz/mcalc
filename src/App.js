@@ -1,25 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import {Button, Navbar} from "reactstrap";
-import './App.css';
+import {Button} from "reactstrap";
 
 const TestBar = styled(Button) `
 width: 50%;
-
-border: 5px solid red;
+margin: auto;
+border: 5px solid black;
 `;
 
+const PageDiv = styled.div `
+width:100%;
+
+`;
 
 const App = () => {
   return (
-    <div className="App">
-      <Navbar>my mcalc</Navbar>
+    <PageDiv className="App">
       <TestBar>Test</TestBar>
       <p>
         i have dirty underwear in my sock, and 
         kenai keeps biting it
       </p>
-    </div>
+    </PageDiv>
   );
 }
 
