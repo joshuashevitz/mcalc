@@ -17,7 +17,7 @@ background-color: lightblue;
 
 const App = () => {
   return (
-    <Layout title="mycalc" color="red">
+    <Layout title="red" color="red">
     <PageDiv className="App">
       <TestBar>Test</TestBar>
       <p>
