@@ -95,7 +95,7 @@ const ProfileContainer = styled(NavLink)`
 
 const Separator = styled(NavItem)`
 	display: flex;
-	font-size: 2rem;
+	font-size: 1rem;
 	font-weight: 300;
 	margin: 0 1rem;
 	margin-bottom: 0.5rem;
@@ -110,36 +110,27 @@ const Separator = styled(NavItem)`
 // not allowed. I tried to reformat it to get rid of those occurrences, but I can't figure out how
 // to do so and make it look the same. It doesn't break anything, but still try to fix it if you want.
 const Topbar = () => {
-	const [isOpen, setIsOpen] = useState(false);
-	const toggle = () => setIsOpen(!isOpen);
+	const [collapse, setIsOpen] = useState(false);
+	const toggle = () => setIsOpen(!collapse);
 
-	return (
-		// The second "light" is the color scheme for the hamburger icon
-		<StyledNavbar>
-			<NavbarToggler onClick={toggle} />
-			<Collapse isOpen={isOpen} navbar>
-				<CenteredNav className="ml-auto" navbar>
-					<NavItem>
-						
-					</NavItem>
-					<NavItem>
-						
-					</NavItem>
-					<NavItem>
-						
-					</NavItem>
-					<NavItem>
-					
-					</NavItem>
-						<NavItem>
-						
-						</NavItem>
-					
-				</CenteredNav>
-			</Collapse>
-		</StyledNavbar>
-	);
-};
-
+    return (
+        <div>
+          <StyledNavbar color="faded" light>
+            <NavbarBrand href="/">MyCalc</NavbarBrand>
+            <NavbarToggler onClick={toggle} className="mr-2" />
+            <Collapse isOpen={!collapse} navbar>
+              <CenteredNav navbar>
+                <Separator>
+                  <ProfileContainer href="">Algebra</ProfileContainer>
+                </Separator>
+                <Separator>
+                  <ProfileContainer href="">Calculus</ProfileContainer>
+                </Separator>
+              </CenteredNav>
+            </Collapse>
+          </StyledNavbar>
+        </div>
+      );
+    }
 // Memoization saves us unnecessary re-renders whenever state changes in a component Topbar is part of.
 export default memo(Topbar);
